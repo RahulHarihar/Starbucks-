@@ -17,11 +17,10 @@
                 <li><a href="whatsnew.html">What's New</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
-           
         </header>
         <div class="content">
             <div class="textBox">
-                <h2>It's not just Coffee<br>It's <span>Starbucks</span></h2>
+                <h2>It's not just Coffee<br>It's <span class="star">Starbucks</span></h2>
                 <p>Starbucks Corporation is an American multinational chain of coffeehouses and roastery reserves headquartered in Seattle, Washington. 
                     It was founded in 1971, and is currently the world's largest coffeehouse chain. </p>
                     <a href="https://www.starbucks.in/" target="_blank">Learn more</a>
@@ -31,27 +30,33 @@
             </div>
         </div>
         <ul class="thumb">
-            <li><img src="thumb1.png" onclick="imgSlider('img1.png'); changeCircleColor('#017143')"></li>
-            <li><img src="thumb2.png" onclick="imgSlider('img2.png'); changeCircleColor('#eb7495')"></li>
-            <li><img src="thumb3.png" onclick="imgSlider('img3.png'); changeCircleColor('#d752b1')"></li>
+            <li><img src="thumb1.png" onclick="imgSlider('img1.png', '#017143')"></li>
+            <li><img src="thumb2.png" onclick="imgSlider('img2.png', '#eb7495')"></li>
+            <li><img src="thumb3.png" onclick="imgSlider('img3.png', '#d752b1')"></li>
         </ul>
         <ul class="sci">
-            <li><a href="https://www.facebook.com/Starbucks/" target="_blank""><img src="facebook.png"></a></li>
+            <li><a href="https://www.facebook.com/Starbucks/" target="_blank"><img src="facebook.png"></a></li>
             <li><a href="https://twitter.com/starbucks?lang=en/" target="_blank"><img src="twitter.png"></a></li>
             <li><a href="https://www.instagram.com/starbucks/" target="_blank"><img src="instagram.png"></a></li>
         </ul>
     </section>
 
     <script type="text/javascript">
-        function imgSlider(anything){
+        function imgSlider(anything, circleColor){
             document.querySelector('.Starbucks').src = anything;
+            changeCircleColor(circleColor);
+            changeTextColor(circleColor); 
         }
 
         function changeCircleColor(color){
-            const circle= document.querySelector('.circle');    
+            const circle = document.querySelector('.circle');    
             circle.style.background = color;
         }
 
+        function changeTextColor(color) {
+            const starText = document.querySelector('.star');
+            starText.style.color = color;
+        }
     </script>
 </body>
 </html>

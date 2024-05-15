@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Starbucks Landing Page</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap">
 </head>
 <body>
     <section>
@@ -12,7 +13,7 @@
         <header>
             <a href="#"><img src="logo.png"  class="logo"></a>
             <ul class="animation">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="#home" id="home-link">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="whatsnew.html">What's New</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
@@ -40,23 +41,21 @@
             <li><a href="https://www.instagram.com/starbucks/" target="_blank"><img src="instagram.png"></a></li>
         </ul>
     </section>
+    <section id="home">
+        <img src="https://digitalcollections.lib.washington.edu/digital/api/singleitem/image/imlsmohai/9497/default.jpg" class="img-fluid" alt="Starbucks Image">
+        <div class="text">
+            <h2 class="hidden">Starbucks</h2>
+            <br>
+            <p class="hidden">Friends since their University of San Francisco days, Gerald Baldwin, a former English teacher, Gordon Bowker, a writer, 
+            and Zev Siegl, a history teacher, were three 20-somethings who were passionate about the arts, fine food, good wine and, 
+            of course, great coffee. They started Starbucks because they wanted Seattle to have access to the delicious dark-roasted
+            coffee that they loved – but had to go out of town to find.</p>
 
-    <script type="text/javascript">
-        function imgSlider(anything, circleColor){
-            document.querySelector('.Starbucks').src = anything;
-            changeCircleColor(circleColor);
-            changeTextColor(circleColor); 
-        }
+        </div>
+    
+    
+    </section>
 
-        function changeCircleColor(color){
-            const circle = document.querySelector('.circle');    
-            circle.style.background = color;
-        }
-
-        function changeTextColor(color) {
-            const starText = document.querySelector('.star');
-            starText.style.color = color;
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

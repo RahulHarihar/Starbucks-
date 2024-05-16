@@ -44,5 +44,14 @@ document.addEventListener('DOMContentLoaded', function() {
     checkVisibility(); // Initial check in case elements are already in view
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const aboutLink = document.getElementById('about-link');
+    const aboutSection = document.getElementById('about');
+    
+    aboutLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        aboutSection.scrollIntoView({ behavior: 'smooth'});
+    });
+});
 
 

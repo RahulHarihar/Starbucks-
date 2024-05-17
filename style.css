@@ -240,10 +240,7 @@ section {
     transform: translateY(0);
 }
 
-#about {
-    background: linear-gradient(135deg, #f3f5f1 0%, #34b47c 100%); /* Gradient background */
-    padding: 50px 20px; /* Padding around the section */
-}
+
 
 .text-about {
     max-width: 1200px; /* Increased width for side-by-side layout */
@@ -259,43 +256,52 @@ section {
 }
 
 .card-container {
-    display: flex; /* Flexbox layout */
-    flex-wrap: wrap; /* Wrap to next line if necessary */
-    justify-content: space-between; /* Space between cards */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
 }
 
 .card {
-    background-color: #fff; /* White background for contrast */
-    padding: 20px; /* Padding inside the card */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    border-radius: 8px; /* Rounded corners */
-    margin-bottom: 30px; /* Space below cards */
-    margin-right: 20px; /* Space to the right of each card */
-    margin-left: 20px; /* Space to the left of each card */
-    flex: 1 1 calc(50% - 40px); /* Responsive width, two cards per row with space */
-    box-sizing: border-box; /* Include padding in width */
-    text-align: left; /* Align text to the left */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    flex: 1 1 calc(50% - 20px); /* Responsive cards, two per row with space between */
+    display: flex;
+    flex-direction: column;
+    height: 300px; /* Adjust height as needed */
+    
 }
 
-.card h5 {
-    font-size: 1.5em; /* Medium font size for subheadings */
-    margin-top: 0; /* Remove top margin */
-    margin-bottom: 10px; /* Space below subheadings */
+.card-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.top-section {
+    flex: 3;
+    background-color: #b2ebd9;
+    padding: 20px;
+}
+
+.bottom-section {
+    flex: 7;
+    background-color: #00704a; /* Starbucks green */
+    color: #fff;
+    padding: 20px;
+}
+
+h5 {
+    color: #00704a;
+    font-size: 1.7rem;
+    margin-top: 25px;
     font-family: "Sedan SC", serif;
-    color: #017143;
 }
 
-.card p {
-    font-size: 1em; /* Standard font size for paragraphs */
-    line-height: 1.6; /* Line height for better readability */
-    margin: 0; /* Remove default margins */
+p {
+    margin-bottom: 0;
     font-family: "Sedan SC", serif;
-}
-
-@media (max-width: 768px) {
-    .card {
-        flex: 1 1 100%; /* Full width on smaller screens */
-        margin-right: 0; /* Remove right margin on smaller screens */
-        margin-left: 0; /* Remove left margin on smaller screens */
-    }
 }

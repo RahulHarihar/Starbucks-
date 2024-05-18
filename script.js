@@ -54,4 +54,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const rewardLink = document.getElementById('reward-link');
+    const rewardSection = document.getElementById('reward');
+
+    rewardLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        rewardSection.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.addEventListener("scroll", function() {
+        const benefits = document.querySelectorAll('.benefit');
+        benefits.forEach(benefit => {
+            const rect = benefit.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 50) {
+                benefit.classList.add('fade-in');
+            }
+        });
+    });
+});
+
+
 

@@ -130,29 +130,6 @@ header ul li a{
     max-width: 60px;
 }
 
-.sci{
-    position: absolute;
-    top: 50%;
-    right: 30px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.sci li{
-    list-style: none;
-}
-
-.sci li a{
-    display: inline-block;
-    margin: 5px 0;
-    transform: scale(0.6);
-    filter: invert(1);
-}
-
-
 .circle{
     position: absolute;
     top: 0;
@@ -384,3 +361,90 @@ p {
     transform: translateY(0);
 }
 
+#contact {
+    padding: 20px; /* Optional: Adds padding around the section */
+}
+
+.left {
+    position: relative;
+    left: 25rem;
+    text-align: left;
+    width: 600px; /* Set the desired width for the form */
+    margin: 0; /* Ensure no extra margin that might center the div */
+    padding: 20px; /* Adds padding inside the div for spacing */
+    border: 1px solid #ccc; /* Optional: Adds a border for better visibility */
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for better appearance */
+}
+
+.left h2, .left p, .left form {
+    margin-bottom: 15px;
+}
+
+.left label {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.left input, .left textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Ensures padding does not affect width */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.left textarea {
+    resize: vertical; /* Allows vertical resizing */
+}
+
+.right{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500%;
+    height: 100%;
+    background: #017143;
+    clip-path: circle(800px at left 400px);
+}
+.right h2{
+    color: #fff;
+    font-family: "Sedan SC", serif;
+    position:relative;
+    margin-top: 18rem;
+    margin-left: 12.5rem;
+    font-size: 3rem;;
+}
+.right p{
+    color: #fff;
+    font-family: "Sedan SC", serif;
+    position:relative;
+    margin-top: 1.5rem;
+    margin-left: 13rem;
+    font-size: 1.2rem;
+}
+.right p a{
+    color: #fff;
+    font-family: "Sedan SC", serif;
+}
+.right p a:hover{
+    color: blue;
+}
+.sci{
+    position: absolute;
+    margin-top: 1rem;
+    margin-left: 13.5rem;
+}
+
+.sci li{
+    list-style: none;
+    display: inline-block;
+}
+
+.sci li a{
+    display: inline-block;
+    margin: 10px;
+    transform: scale(0.6);
+    filter: invert(1);
+}

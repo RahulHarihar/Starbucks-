@@ -375,6 +375,9 @@ p {
     border: 1px solid #ccc; /* Optional: Adds a border for better visibility */
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for better appearance */
 }
+.left h2{
+    font-size: 1.5rem;
+}
 
 .left h2, .left p, .left form {
     margin-bottom: 15px;
@@ -399,20 +402,23 @@ p {
     resize: vertical; /* Allows vertical resizing */
 }
 
-.right{
+.right {
     position: absolute;
-    top: 0;
+    top: 150px;
     left: 0;
-    width: 500%;
-    height: 100%;
-    background: #017143;
-    clip-path: circle(800px at left 400px);
+    width: 40%; /* Adjust the width to control how much of the rectangle is visible */
+    height: 50%;
+    background: #017143; /* Green background color */
+    border-top-right-radius: 160px; /* Adjust the border radius for rounded edges */
+    border-bottom-right-radius: 160px; /* Adjust the border radius for rounded edges */
+    z-index: 0;
 }
+
 .right h2{
     color: #fff;
     font-family: "Sedan SC", serif;
     position:relative;
-    margin-top: 18rem;
+    margin-top: 5rem;
     margin-left: 12.5rem;
     font-size: 3rem;;
 }
@@ -448,3 +454,36 @@ p {
     transform: scale(0.6);
     filter: invert(1);
 }
+footer {
+    background-color: #017143; /* Green background color */
+    padding: 10px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white; /* Text color */
+}
+
+.footer-left {
+    flex: 1;
+}
+
+.footer-right {
+    display: flex;
+}
+
+.footer-right img {
+    width: 25px; /* Adjust size of social media icons */
+    height: 25px;
+    margin-left: 25px; /* Adjust spacing between social media icons */
+    filter: invert(1);
+}
+
+
+.heart-symbol {
+    color: red; /* Adjust color of the heart symbol */
+    
+}
+
